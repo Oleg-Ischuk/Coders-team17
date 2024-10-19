@@ -7,7 +7,7 @@
 body {
   font-family: "Inter Tight", sans-serif;
   color: #fbfbfb;
-  background-color: #576F35, #7A3145,#141414,#FBFBFB;
+  background-color: #7A3145;
 }
 
 h1,
@@ -65,7 +65,7 @@ img {
 @media only screen and (min-width: 768px) {
   .container {
     max-width: 768px;
-    padding: 32px;
+    padding: 0 32px;
   }
 }
 /* Styles for Desktop devices */
