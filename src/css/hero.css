@@ -1,0 +1,141 @@
+.hero-section {
+  position: relative;
+  background: #576f35;
+}
+
+.hero-container {
+  padding: 100px 0 0 0;
+}
+
+.hero-div {
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fbfbfb;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #fbfbfb;
+  margin-bottom: 40px;
+}
+
+.hero-picture {
+  max-width: 375px;
+  min-height: 370px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(20, 20, 20, 0.2),
+      rgba(20, 20, 20, 0.2)
+    ),
+    url(/img/hero-pictures/hero-mob-1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .hero-picture {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(20, 20, 20, 0.2),
+        rgba(20, 20, 20, 0.2)
+      ),
+      url(/img/hero-pictures/hero-desk-2x.jpg);
+  }
+}
+
+/* ==================================== tablet ==================================== */
+@media only screen and (min-width: 768px) {
+  .hero-container {
+    padding: 122px 0 0 0;
+  }
+
+  .hero-div {
+    padding: 0 32px;
+  }
+
+  .hero-title {
+    font-size: 76px;
+    margin-bottom: 25px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 50px;
+  }
+
+  .hero-picture {
+    max-width: 768px;
+    min-height: 539px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(20, 20, 20, 0.2),
+        rgba(20, 20, 20, 0.2)
+      ),
+      url(/img/hero-pictures/hero-tab-1x.jpg);
+  }
+
+  @media only screen and (max-width: 1279px) and (min-resolution: 192dpi) {
+    .hero-picture {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(20, 20, 20, 0.2),
+          rgba(20, 20, 20, 0.2)
+        ),
+        url(/img/hero-pictures/hero-tab-2x.jpg);
+    }
+  }
+}
+
+/* ==================================== desktop ==================================== */
+
+@media only screen and (min-width: 1280px) {
+  .hero-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0;
+  }
+
+  .hero-div {
+    width: 50%;
+    padding: 238px 28px 0 100px;
+  }
+
+  .hero-title {
+    margin-bottom: 128px;
+  }
+
+  .hero-picture {
+    width: 50%;
+    max-width: 650px;
+    min-height: 800px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(20, 20, 20, 0.2),
+        rgba(20, 20, 20, 0.2)
+      ),
+      url(/img/hero-pictures/hero-desk-1x.jpg);
+  }
+
+  @media only screen and (min-width: 1280px) and (min-resolution: 192dpi) {
+    .hero-picture {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(20, 20, 20, 0.2),
+          rgba(20, 20, 20, 0.2)
+        ),
+        url(/img/hero-pictures/hero-desk-2x.jpg);
+    }
+  }
+}
