@@ -1,3 +1,15 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter Tight", sans-serif;
+  color: #fbfbfb;
+  background-color: #576F35, #7A3145,#141414,#FBFBFB;
+}
+
 h1,
 h2,
 h3,
