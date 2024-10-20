@@ -4,146 +4,233 @@
   padding: 0;
 }
 
-.howitworks-1 {
-  margin: 0 auto;
-  padding: 40px 0;
-  background-color: #7a3145;
+.howitworks {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  background: linear-gradient(
+    to bottom,
+    #7a3145 0% 44.76%,
+    #576f35 44.76% 100%
+  );
 }
-.howitworks-2 {
+
+.section-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-image-conteiner {
+  padding-bottom: 40px;
+}
+
+.container-img {
+  height: 450px;
+  position: relative;
+}
+
+.overlay {
+  display: flex;
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(
+    0deg,
+    rgba(20, 20, 20, 0.3) 0%,
+    rgba(20, 20, 20, 0.3) 100%
+  );
+  height: 100%;
   width: 100%;
-  padding: 80px 0;
-  background-color: #576f35;
+  border-radius: 30px;
 }
 
 .cooking-woman {
   border-radius: 30px;
+  height: 450px;
+}
+
+.work-conteiner {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .title-p2 {
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 100%;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
   color: #fbfbfb;
-
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
   margin-bottom: 20px;
+  max-width: 335px;
 }
+
 .selection-title-p2 {
   color: rgba(251, 251, 251, 0.3);
 }
-.text-p2 {
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 129%;
-  color: #fbfbfb;
 
+.text-p2 {
+  color: #fbfbfb;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
   margin-bottom: 40px;
+  letter-spacing: -0.02em;
+  max-width: 335px;
 }
+
 .list-p2 {
-  list-style: none;
-  counter-reset: list-counter;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 20px;
+  counter-reset: list-counter;
 }
 
 .list-item-p2 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 27px;
   border-radius: 15px;
-  counter-increment: list-counter;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 12px 24px;
   background-color: #fbfbfb;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  counter-increment: list-counter;
 }
 
 .list-item-p2::before {
   content: counter(list-counter);
-  font-family: 'Inter Tight', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 42px;
-  height: 42px;
-  background-color: #7a3145;
-  border: #d4bec4 solid 5px;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: -0.02em;
   color: #fbfbfb;
-  margin-right: 24px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
+  background-color: #7a3145;
+  border: 5px solid rgba(211, 190, 196, 1);
   flex-shrink: 0;
 }
 
 .list-text-p2 {
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 117%;
-  letter-spacing: -0.02em;
   color: rgba(20, 20, 20, 0.6);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: -0.024px;
+  text-align: start;
 }
+
 .list-selection-p2 {
-  font-weight: 700;
   color: #141414;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: -0.024px;
 }
 
 @media screen and (min-width: 768px) {
-  .howitworks-1 {
-    padding: 100px 0;
-  }
-  .howitworks-1 .container {
-    padding: 0 64px;
+  .howitworks {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
-  .howitworks-2 {
-    padding: 100px 0;
+  .work-image-conteiner {
+    padding-bottom: 100px;
   }
-  .howitworks-2 .container {
-    padding: 0 159px;
+
+  .container-img {
+    width: 640px;
+    height: 640px;
   }
+
+  .cooking-woman {
+    width: 640px;
+    height: 640px;
+  }
+
+  .work-conteiner {
+    padding-top: 100px;
+  }
+
   .title-p2 {
     font-size: 32px;
     margin-bottom: 25px;
+    max-width: 450px;
   }
+
   .text-p2 {
     font-size: 16px;
-    line-height: 125%;
+    line-height: 1.25;
     margin-bottom: 50px;
+    max-width: 450px;
   }
+
+  .list-item-p2 {
+    width: 450px;
+    padding-right: 25px;
+  }
+
   .list-text-p2 {
     font-size: 16px;
-    line-height: 125%;
+    line-height: 1.25;
+  }
+
+  .span-work-text {
+    font-size: 16px;
+    line-height: 1.25;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .howitworks {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .howitworks-1 {
-    width: 100%;
-    margin: 0 auto;
-    padding: 100px 0;
-  }
-  .howitworks-1 .container {
-    padding: 0 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 0;
+    padding-left: 0;
+    background: linear-gradient(
+      to right,
+      #7a3145 0% 49.25%,
+      #576f35 49.25% 100%
+    );
   }
 
-  .howitworks-2 {
-    width: 100%;
-    padding: 100px 0 160px 0;
+  .section-main-container {
+    flex-direction: row;
   }
-  .howitworks-2 .container {
-    padding: 0 100px;
+
+  .work-image-conteiner {
+    padding-right: 95px;
+    padding-bottom: 0;
+  }
+
+  .container-img {
+    width: 430px;
+    height: 559px;
+  }
+
+  .cooking-woman {
+    width: 430px;
+    height: 559px;
+  }
+
+  .work-conteiner {
+    padding-left: 105px;
+    padding-top: 0;
+  }
+
+  .list-p2 {
+    margin-bottom: 60px;
   }
 }

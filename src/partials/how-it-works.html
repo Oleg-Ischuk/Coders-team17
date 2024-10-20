@@ -1,98 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How It Works</title>
-    <link rel="stylesheet" href="../css/how-it-works.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <section class="howitworks">
-      <section class="howitworks-1">
-        <h2 class="visually-hidden">How It Works</h2>
-        <div class="container">
-          <picture>
-            <source
-              srcset="
-                ../img/how_it_works-pictures/how-it-works-mob-1x.jpg 1x,
-                ../img/how_it_works-pictures/how-it-works-mob-2x.jpg 2x
-              "
-              media="(max-width: 767px)"
-            />
-            <source
-              srcset="
-                ../img/how_it_works-pictures/how-it-works-tab-1x.jpg 1x,
-                ../img/how_it_works-pictures/how-it-works-tab-2x.jpg 2x
-              "
-              media="(min-width: 768px) and (max-width: 1199px)"
-            />
-            <source
-              srcset="
-                ../img/how_it_works-pictures/how-it-works-desk-1x.jpg 1x,
-                ../img/how_it_works-pictures/how-it-works-desk-2x.jpg 2x
-              "
-              media="(min-width: 1200px)"
-            />
-            <img
-              src="../img/how_it_works-pictures/how-it-works-mob-1x.jpg"
-              alt="Cooking woman"
-              class="cooking-woman"
-            />
-          </picture>
-        </div>
-      </section>
-
-      <section class="howitworks-2">
-        <div class="container">
-          <h2 class="title-p2">
-            To order your
-            <span class="selection-title-p2">vegetable</span> basket, simply
-            follow these <span class="selection-title-p2">easy steps</span>
-          </h2>
-          <p class="text-p2">
-            Our baskets are assembled with care and delivered straight to your
-            doorstep, so you can enjoy the taste of fresh vegetables without
-            ever leaving your home.
+<section class="howitworks" id="works">
+  <div class="container section-main-container">
+    <h2 class="visually-hidden">How It Works</h2>
+    <div class="work-image-conteiner">
+      <div class="container-img">
+        <picture>
+          <source
+            media="(min-width: 1280px)"
+            srcset="
+              ../img/how_it_works-pictures/how-it-works-desk-1x.jpg 1x,
+              ../img/how_it_works-pictures/how-it-works-desk-2x.jpg 2x
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ../img/how_it_works-pictures/how-it-works-tab-1x.jpg 1x,
+              ../img/how_it_works-pictures/how-it-works-tab-2x.jpg 2x
+            "
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              ../img/how_it_works-pictures/how-it-works-mob-1x.jpg 1x,
+              ../img/how_it_works-pictures/how-it-works-mob-2x.jpg 2x
+            "
+          />
+          <img
+            class="cooking-woman"
+            src="../img/how_it_works-pictures/how-it-works-tab-1x.jpg"
+            alt="Cooking woman"
+            width="640"
+            height="640"
+          />
+        </picture>
+        <span class="overlay"></span>
+      </div>
+    </div>
+    <div class="work-conteiner">
+      <h3 class="title-p2">
+        To order your <span class="selection-title-p2">vegetable</span> basket,
+        simply follow these <span class="selection-title-p2">easy steps</span>
+      </h3>
+      <p class="text-p2">
+        Our baskets are assembled with care and delivered straight to your
+        doorstep, so you can enjoy the taste of fresh vegetables without ever
+        leaving your home.
+      </p>
+      <ol class="list-p2">
+        <li class="list-item-p2">
+          <p class="list-text-p2">
+            Just choose <span class="list-selection-p2">the vegetable</span> you
+            want to order by clicking on the checkboxes
+            <span class="list-selection-p2">next to it.</span>
           </p>
-
-          <ol class="list-p2">
-            <li class="list-item-p2">
-              <div class="list-text-p2">
-                Just choose
-                <span class="list-selection-p2">the vegetable</span> you want to
-                order by clicking on the checkboxes
-                <span class="list-selection-p2">next to it</span>.
-              </div>
-            </li>
-            <li class="list-item-p2">
-              <div class="list-text-p2">
-                Click on <span class="list-selection-p2">the basket</span> and
-                fill out the form.
-              </div>
-            </li>
-            <li class="list-item-p2">
-              <div class="list-text-p2">
-                Sit back and relax! Your
-                <span class="list-selection-p2">fresh vegetables</span> basket
-                will be delivered.
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-    </section>
-  </body>
-</html>
+        </li>
+        <li class="list-item-p2">
+          <p class="list-text-p2">
+            Click on <span class="list-selection-p2">the basket</span> and fill
+            out the form.
+          </p>
+        </li>
+        <li class="list-item-p2">
+          <p class="list-text-p2">
+            Sit back and relax! Your
+            <span class="list-selection-p2">fresh vegetables</span> basket will
+            be delivered.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
