@@ -5,9 +5,9 @@
 }
 
 body {
-  font-family: "Inter Tight", sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   color: #fbfbfb;
-  background-color: #576F35, #7A3145,#141414,#FBFBFB;
+  background-color: #576f35, #7a3145, #141414, #fbfbfb;
 }
 
 h1,
@@ -75,4 +75,3 @@ img {
     padding: 0 100px;
   }
 }
-
