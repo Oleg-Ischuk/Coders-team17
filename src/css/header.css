@@ -101,6 +101,9 @@
 }
 
 @media only screen and (min-width: 1280px) {
+  .container{
+    margin: 0 100px;
+  }
   .menu-burger-tab-desk {
     display: none;
   }
