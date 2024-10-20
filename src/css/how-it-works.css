@@ -161,15 +161,15 @@
   }
 
   .container-img {
-    width: 100%; /* Ensure the image container adapts to the available space */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 640px; /* Limit the maximum width to avoid overflow */
+    width: 100%;
+    height: auto;
+    max-width: 640px;
   }
 
   .cooking-woman {
-    width: 100%; /* The image should scale with the container */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 640px; /* Limit the image's width */
+    width: 100%;
+    height: auto;
+    max-width: 640px;
   }
 
   .work-conteiner {
