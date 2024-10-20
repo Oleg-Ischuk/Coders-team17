@@ -60,7 +60,7 @@ padding:0 10px;
 @media screen and (min-width: 1280px) {
     .advertisement-container {
         width: 1280px;
-        padding: 0 113px;
+        padding: 0 100px;
     }
 
     .advertisement-subtitle {
