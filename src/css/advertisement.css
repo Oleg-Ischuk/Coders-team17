@@ -1,0 +1,81 @@
+.advertisement {
+    padding: 80px 0;
+    background-color: #fbfbfb;
+}
+.advertisement-container {
+    padding: 0 10px;
+}
+
+.advertisement-subtitle {
+    font-weight: 600;
+font-size: 48px;
+line-height: 104%;
+letter-spacing: -0.01em;
+text-transform: uppercase;
+color: #141414;
+display: flex;
+flex-direction: column;
+padding:0 10px;
+}
+
+.advertisement-subtitle span {
+    border-radius: 12px;
+height: 102px;
+background-color: #576F35;
+color: #fbfbfb;
+padding:0 10px;
+    margin: 0 -10px;
+}
+
+@media screen and (min-width: 375px) {
+    .advertisement-container {
+        width: 375px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .advertisement-container {
+        width: 768px;
+        padding: 0 16px;
+    }
+
+    .advertisement {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .advertisement-subtitle {
+        font-size: 64px;
+        line-height: 109%;
+    }
+
+.advertisement-subtitle span {
+    height: 86px;
+    padding: 8px 16px;
+    margin: 0 -16px;
+}
+
+}
+
+@media screen and (min-width: 1280px) {
+    .advertisement-container {
+        width: 1280px;
+        padding: 0 113px;
+    }
+
+    .advertisement-subtitle {
+        font-size: 76px;
+line-height: 105%;
+max-width: 1054px;
+display: inline-block;
+    }
+
+    .advertisement-subtitle span {
+        max-width: 808px;
+        height: 86px;
+        padding: 0 0 0 13px;
+        margin: 0 -13px;
+    }
+
+    
+}
