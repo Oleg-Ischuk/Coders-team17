@@ -18,13 +18,20 @@
   display: none;
 }
 
-.icon-menu-tab-desk {
-  display: none;
-}
-
 .menu-with-button {
   display: flex;
   align-items: center;
+}
+
+.menu-burger-mob {
+  background-color: transparent;
+  border: none;
+  height: 32px;
+  width: 32px;
+}
+
+.menu-burger-tab-desk {
+  display: none;
 }
 
 .menu-list {
@@ -81,17 +88,21 @@
     display: inline;
   }
 
-  .icon-menu-mob {
+  .menu-burger-mob {
     display: none;
   }
 
-  .icon-menu-tab-desk {
+  .menu-burger-tab-desk {
     display: inline;
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    width: 40px;
   }
 }
 
 @media only screen and (min-width: 1280px) {
-  .icon-menu-tab-desk {
+  .menu-burger-tab-desk {
     display: none;
   }
 
