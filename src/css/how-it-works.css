@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.howitworks {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  background: linear-gradient(
+    to bottom,
+    #7a3145 0% 44.76%,
+    #576f35 44.76% 100%
+  );
+}
+
+.section-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-image-conteiner {
+  padding-bottom: 40px;
+}
+
+.container-img {
+  height: 450px;
+  position: relative;
+}
+
+.overlay {
+  display: flex;
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(
+    0deg,
+    rgba(20, 20, 20, 0.3) 0%,
+    rgba(20, 20, 20, 0.3) 100%
+  );
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.cooking-woman {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.work-conteiner {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title-p2 {
+  color: #fbfbfb;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  max-width: 335px;
+}
+
+.selection-title-p2 {
+  color: rgba(251, 251, 251, 0.3);
+}
+
+.text-p2 {
+  color: #fbfbfb;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  margin-bottom: 40px;
+  letter-spacing: -0.02em;
+  max-width: 335px;
+}
+
+.list-p2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  counter-reset: list-counter;
+}
+
+.list-item-p2 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 27px;
+  border-radius: 15px;
+  background-color: #fbfbfb;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  counter-increment: list-counter;
+}
+
+.list-item-p2::before {
+  content: counter(list-counter);
+  color: #fbfbfb;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #7a3145;
+  border: 5px solid rgba(211, 190, 196, 1);
+  flex-shrink: 0;
+}
+
+.list-text-p2 {
+  color: rgba(20, 20, 20, 0.6);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: -0.024px;
+  text-align: start;
+}
+
+.list-selection-p2 {
+  color: #141414;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: -0.024px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+  }
+  .howitworks {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    background: linear-gradient(
+      to bottom,
+      #7a3145 0% 54.6%,
+      #576f35 54.6% 100%
+    );
+  }
+
+  .work-image-conteiner {
+    padding-bottom: 100px;
+  }
+
+  .container-img {
+    width: 100%;
+    height: auto;
+    max-width: 640px;
+  }
+
+  .cooking-woman {
+    width: 100%;
+    height: auto;
+    max-width: 640px;
+  }
+
+  .work-conteiner {
+    padding-top: 100px;
+  }
+
+  .title-p2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    max-width: 450px;
+  }
+
+  .text-p2 {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 50px;
+    max-width: 450px;
+  }
+
+  .list-item-p2 {
+    width: 450px;
+    padding-right: 25px;
+  }
+
+  .list-text-p2 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .span-work-text {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .howitworks {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 0;
+    padding-left: 0;
+    background: linear-gradient(
+      to right,
+      #7a3145 0% 49.25%,
+      #576f35 49.25% 100%
+    );
+  }
+
+  .section-main-container {
+    flex-direction: row;
+  }
+
+  .work-image-conteiner {
+    padding-right: 100px;
+    padding-bottom: 0;
+  }
+
+  .container-img {
+    width: 430px;
+    height: 559px;
+  }
+
+  .cooking-woman {
+    width: 430px;
+    height: 559px;
+  }
+
+  .work-conteiner {
+    padding-left: 100px;
+    padding-top: 0;
+  }
+
+  .list-p2 {
+    margin-bottom: 60px;
+  }
+}
