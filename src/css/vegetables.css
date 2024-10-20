@@ -80,6 +80,10 @@
         padding-bottom: 50px;
     }
 
+        .vegetables-name {
+            font-size: 32px;
+        }
+
     .accent-color {
         display: block;
     }
@@ -96,6 +100,6 @@
 @media only screen and (min-width: 1280px) {
 
     .vegetables-list-item {
-        flex-basis: calc((100% - 28px) / 3);
+        flex-basis: calc((100% - 56px) / 3);
     }
 }
