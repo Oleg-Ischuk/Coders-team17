@@ -19,7 +19,7 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/Coders-team17/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/Coders-team17/assets/index-CEqIhtN9.css">
+    <link rel="stylesheet" crossorigin href="/Coders-team17/assets/index-CcurbeGK.css">
   </head>
   <body>
     <header class="page-header">
@@ -33,35 +33,25 @@
             height="16"
             class="icon-logo-mob"
           >
-            <use href="/Coders-team17/assets/icon-CCCXJZ49.svg#icon-logo-mob"></use></svg
+            <use href="/Coders-team17/assets/icon-DAwf7aWx.svg#icon-logo-mob"></use></svg
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="194"
             height="18"
             class="icon-logo-tab-desk"
           >
-            <use href="/Coders-team17/assets/icon-CCCXJZ49.svg#icon-logo-tab-desk"></use></svg
+            <use href="/Coders-team17/assets/icon-DAwf7aWx.svg#icon-logo-tab-desk"></use></svg
         ></a>
       </div>
       <div class="menu-with-button">
-        <button type="button" class="menu-burger-mob">
+        <button type="button" class="menu-burger-mob js-open-menu" data-modal-open>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
             height="32"
             class="icon-menu-mob"
           >
-            <use href="/Coders-team17/assets/icon-CCCXJZ49.svg#icon-menu-mob"></use>
-          </svg>
-        </button>
-        <button type="button" class="menu-burger-tab-desk">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            class="icon-menu-tab-desk"
-          >
-            <use href="/Coders-team17/assets/icon-CCCXJZ49.svg#icon-menu-mob"></use>
+            <use href="/Coders-team17/assets/icon-DAwf7aWx.svg#icon-menu-mob"></use>
           </svg>
         </button>
         <ul class="menu-list">
@@ -78,39 +68,35 @@
         <button type="button" class="menu-button">SHOP NOW</button>
       </div>
     </nav>
-    <div class="mobil-backdrop">
-  <div class="mobile-menu">
-    <div class="container mobile-menu-container">
-      <button class="mobile-menu-close">
-        <svg class="close-icon" width="16" height="16">
-          <use href="/Coders-team17/assets/icon-CCCXJZ49.svg#icon-mob-close-btn"></use>
-        </svg>
-      </button>
-      <button class="pad-menu-close">
-        <svg class="close-icon" width="20" height="20">
-          <use href="/Coders-team17/assets/icon-CCCXJZ49.svg#icon-tab-desk-close-btn"></use>
-        </svg>
-      </button>
-      <nav class="mobile-nav">
-        <ul class="mobile-menu-list">
-          <li class="mobile-menu-item">
-            <a class="mobile-menu-link mobile-current" href="./index.html"
-              >How It Works</a
-            >
-          </li>
-          <li class="mobile-menu-item">
-            <a class="mobile-menu-link" href="">Vegetabless</a>
-          </li>
-          <li class="mobile-menu-item">
-            <a class="mobile-menu-link" href="">Reviews</a>
-          </li>
-        </ul>
-      </nav>
-      <button type="submit" class="order-button">SHOP NOW</button>
-    </div>
+    <div class="menu-backdrop js-menu-container" id="mobile-menu" data-modal>
+  <div class="mob-menu js-menu-container">
+    <button
+      type="button"
+      class="menu-close-btn js-close-menu"
+      data-modal-close
+    >
+      <svg class="close-btn-icon">
+        <use href="/Coders-team17/assets/icon-DAwf7aWx.svg#icon-close-btn"></use>
+      </svg>
+    </button>
+
+    <nav class="mob-menu-nav">
+      <ul class="mob-menu-ul">
+        <li class="mob-menu-li">
+          <a class="mob-menu-a" href="#howitworks">How It Works</a>
+        </li>
+        <li class="mob-info-li">
+          <a class="mob-menu-a" href="#vegetable">Vegetables</a>
+        </li>
+        <li class="mob-info-li">
+          <a class="mob-menu-a" href="#reviews">Reviews</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="mob-menu-btn" type="button">Shop now</button>
   </div>
 </div>
-
   </div>
 </header>
 
@@ -456,7 +442,7 @@
         <div class="footer-logo">
           <a class="footer-icon-p" href="./">
             <svg class="footer-icon-item" width="16" height="16">
-              <use href="/Coders-team17/assets/icon-CCCXJZ49.svg#footer-icon-vector"></use>
+              <use href="/Coders-team17/assets/icon-DAwf7aWx.svg#footer-icon-vector"></use>
             </svg>
             GREEN.HARVEST
           </a>
