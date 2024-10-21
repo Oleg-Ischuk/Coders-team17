@@ -87,10 +87,6 @@
     display: inline;
   }
 
-  .menu-burger-mob {
-    display: none;
-  }
-
   .menu-burger-tab-desk {
     display: inline;
     background-color: transparent;
@@ -101,7 +97,7 @@
 }
 
 @media only screen and (min-width: 1280px) {
-  .menu-burger-tab-desk {
+  .menu-burger-mob {
     display: none;
   }
 
