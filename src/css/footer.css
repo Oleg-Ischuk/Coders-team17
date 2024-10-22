@@ -53,6 +53,7 @@
   flex-direction: column;
   align-items: flex-start;
   color: #fbfbfb;
+  gap: 40px;
 }
 
 .footer-nav-list {
@@ -171,7 +172,7 @@
   }
 
   .footer-nav {
-    /* gap: 64px; */
+    gap: 64px;
   }
 
   .footer-nav-list {
@@ -192,7 +193,6 @@
     font-size: 18px;
   }
 }
-
 /* ========== DESKTOP ========== */
 
 @media screen and (min-width: 1280px) {
