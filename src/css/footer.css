@@ -63,6 +63,7 @@
 }
 
 .footer-nav-link {
+  width: 215px;
   display: block;
   color: #fbfbfb;
   font-family: 'Inter Tight';
@@ -88,7 +89,7 @@
 
 .footer-adress-list {
   display: flex;
-  width: 179px;
+  width: 215px;
   flex-direction: column;
   align-items: flex-start;
   gap: 14px;
