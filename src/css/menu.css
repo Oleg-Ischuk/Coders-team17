@@ -46,6 +46,13 @@
   align-content: center;
   flex-wrap: wrap;
 }
+.close-btn-icon{
+  bottom: 24px;
+  top: 28px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+}
 
 .mob-menu-nav {
   margin-top: auto;
