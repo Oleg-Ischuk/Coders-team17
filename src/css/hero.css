@@ -75,16 +75,16 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1280px ) {
   .hero-section {
       display: flex;
   }
 
   #hero-container {
-      /* padding-right: 28px; */
-      width: 630px;
-  }
-
+    padding-left: 100px;
+    padding-right: 28px;
+    width: 630px;
+}
   .hero-title {
       width: 502px;
   }
