@@ -3,11 +3,13 @@
 *::after {
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
-  font-family: "Inter Tight", sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   color: #fbfbfb;
-  background-color: #7A3145;
+  background-color: #7a3145;
 }
 
 h1,
@@ -75,4 +77,3 @@ img {
     padding: 0 100px;
   }
 }
-

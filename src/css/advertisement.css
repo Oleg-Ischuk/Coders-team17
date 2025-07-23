@@ -1,81 +1,166 @@
 .advertisement {
-    padding: 80px 0;
-    background-color: #fbfbfb;
+  padding: 80px 0;
+  background-color: #fbfbfb;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* Легкий фоновий ефект при ховері */
+.advertisement:hover {
+  background-color: #f8f8f8;
+}
+
+/* Декоративний елемент */
+.advertisement::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(87, 111, 53, 0.05) 0%,
+    transparent 70%
+  );
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.advertisement:hover::before {
+  transform: translate(-50%, -50%) scale(3);
+}
+
 .advertisement-container {
-    padding: 0 10px;
+  padding: 0 10px;
 }
 
 .advertisement-subtitle {
-    font-weight: 600;
-font-size: 48px;
-line-height: 104%;
-letter-spacing: -0.01em;
-text-transform: uppercase;
-color: #141414;
-display: flex;
-flex-direction: column;
-padding:0 10px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 104%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #141414;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.advertisement-subtitle:hover {
+  transform: translateY(-2px);
 }
 
 .advertisement-subtitle span {
-    border-radius: 12px;
-height: 102px;
-background-color: #576F35;
-color: #fbfbfb;
-padding:0 10px;
-    margin: 0 -10px;
+  border-radius: 12px;
+  height: 102px;
+  background-color: #576f35;
+  color: #fbfbfb;
+  padding: 0 10px;
+  margin: 0 -10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 8px;
+}
+
+/* Світловий ефект для зеленого блоку */
+.advertisement-subtitle span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(251, 251, 251, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.advertisement-subtitle:hover span::before {
+  left: 100%;
+}
+
+.advertisement-subtitle:hover span {
+  background-color: #4a5e2e;
+  transform: translateX(5px) scale(1.01);
+  box-shadow: 0 6px 20px rgba(87, 111, 53, 0.25);
+}
+
+/* Ефект для основного тексту */
+.advertisement-subtitle:hover {
+  color: #0f0f0f;
 }
 
 @media screen and (min-width: 375px) {
-    .advertisement-container {
-        width: 375px;
-    }
+  .advertisement-container {
+    width: 375px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .advertisement-container {
-        width: 768px;
-        padding: 0 16px;
-    }
+  .advertisement-container {
+    width: 768px;
+    padding: 0 16px;
+  }
 
-    .advertisement {
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
+  .advertisement {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 
-    .advertisement-subtitle {
-        font-size: 64px;
-        line-height: 109%;
-    }
+  .advertisement-subtitle {
+    font-size: 64px;
+    line-height: 109%;
+  }
 
-.advertisement-subtitle span {
+  .advertisement-subtitle span {
     height: 86px;
     padding: 8px 16px;
     margin: 0 -16px;
-}
+    margin-bottom: 10px;
+  }
 
+  .advertisement::before {
+    width: 500px;
+    height: 500px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
-    .advertisement-container {
-        width: 1280px;
-        padding: 0 100px;
-    }
+  .advertisement-container {
+    width: 1280px;
+    padding: 0 100px;
+  }
 
-    .advertisement-subtitle {
-        font-size: 76px;
-line-height: 105%;
-max-width: 1054px;
-display: inline-block;
-    }
+  .advertisement-subtitle {
+    font-size: 76px;
+    line-height: 105%;
+    max-width: 1054px;
+    display: inline-block;
+  }
 
-    .advertisement-subtitle span {
-        max-width: 808px;
-        height: 86px;
-        padding: 0 0 0 13px;
-        margin: 0 -13px;
-    }
+  .advertisement-subtitle span {
+    max-width: 808px;
+    height: 86px;
+    padding: 0 0 0 13px;
+    margin: 0 -13px;
+    margin-bottom: 12px;
+  }
 
-    
+  .advertisement::before {
+    width: 800px;
+    height: 800px;
+  }
 }

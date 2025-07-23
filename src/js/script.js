@@ -11,16 +11,33 @@
   const toggleMenu = () => {
     const isMenuOpen =
       openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+
     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
     mobileMenu.classList.toggle('is-open');
 
+    // Блокування/розблокування прокрутки
+    if (!isMenuOpen) {
+      // Меню відкривається - блокуємо прокрутку
+      document.body.classList.add('menu-open');
+      document.documentElement.classList.add('menu-open');
+    } else {
+      // Меню закривається - дозволяємо прокрутку
+      document.body.classList.remove('menu-open');
+      document.documentElement.classList.remove('menu-open');
+    }
+
+    // Якщо ви використовуєте bodyScrollLock бібліотеку, залиште цей код
     const scrollLockMethod = !isMenuOpen
       ? 'disableBodyScroll'
       : 'enableBodyScroll';
-    bodyScrollLock[scrollLockMethod](document.body);
+
+    // Перевіряємо чи існує bodyScrollLock
+    if (typeof bodyScrollLock !== 'undefined') {
+      bodyScrollLock[scrollLockMethod](document.body);
+    }
   };
 
-  //  добавили что бы закрывалось при нажатии на ссылку
+  // добавили что бы закрывалось при нажатии на ссылку
   menuLinks.forEach(menuLink => {
     menuLink.addEventListener('click', toggleMenu);
   });
@@ -34,6 +51,13 @@
     if (!e.matches) return;
     mobileMenu.classList.remove('is-open');
     openMenuBtn.setAttribute('aria-expanded', false);
-    bodyScrollLock.enableBodyScroll(document.body);
+
+    // Розблокувати прокрутку при зміні розміру екрану
+    document.body.classList.remove('menu-open');
+    document.documentElement.classList.remove('menu-open');
+
+    if (typeof bodyScrollLock !== 'undefined') {
+      bodyScrollLock.enableBodyScroll(document.body);
+    }
   });
 })();

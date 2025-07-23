@@ -2,6 +2,7 @@
 .footer {
   background-color: #7a3145;
   padding: 40px 0;
+  transition: background-color 0.3s ease;
 }
 
 .footer-container {
@@ -23,14 +24,25 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 14px;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo-p:hover {
+  transform: translateY(-3px);
 }
 
 .footer-logo {
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
 }
 
 .footer-icon-item {
   fill: #fbfbfb;
+  transition: all 0.3s ease;
 }
 
 .footer-icon-p {
@@ -39,6 +51,19 @@
   gap: 4px;
   color: #fbfbfb;
   font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-icon-p:hover {
+  color: #f0e6ea;
+  text-shadow: 0 0 8px rgba(240, 230, 234, 0.3);
+}
+
+.footer-icon-p:hover .footer-icon-item {
+  fill: #f0e6ea;
+  filter: drop-shadow(0 0 4px rgba(240, 230, 234, 0.5));
 }
 
 .footer-logo-text {
@@ -47,7 +72,13 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 1.28em;
+  transition: color 0.3s ease;
 }
+
+.footer-logo-p:hover .footer-logo-text {
+  color: #f0e6ea;
+}
+
 .footer-nav {
   display: flex;
   flex-direction: column;
@@ -70,11 +101,31 @@
   font-weight: 600;
   line-height: 32px;
   letter-spacing: -1.5%;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding: 4px 0;
+}
+
+.footer-nav-link::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f0e6ea;
+  transition: width 0.3s ease;
 }
 
 .footer-nav-link:hover {
   transform: scale(1.05);
+  color: #f0e6ea;
+  text-shadow: 0 2px 4px rgba(240, 230, 234, 0.3);
+}
+
+.footer-nav-link:hover::before {
+  width: 100%;
 }
 
 .footer-adress {
@@ -100,12 +151,33 @@
 
 .footer-tel {
   display: block;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #fbfbfb;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-style: normal;
+  position: relative;
+  padding: 2px 0;
+}
+
+.footer-tel::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #f0e6ea;
+  transition: width 0.3s ease;
 }
 
 .footer-tel:hover {
   transform: scale(1.05);
+  color: #f0e6ea;
+  text-shadow: 0 1px 3px rgba(240, 230, 234, 0.3);
+}
+
+.footer-tel:hover::after {
+  width: 100%;
 }
 
 .footer-privacy {
@@ -117,6 +189,11 @@
   font-weight: 500;
   justify-content: space-between;
   width: 100%;
+  transition: color 0.3s ease;
+}
+
+.footer-privacy:hover {
+  color: rgba(251, 251, 251, 0.7);
 }
 
 .footer-privacy-list {
@@ -125,13 +202,46 @@
   gap: 8px;
 }
 
+.footer-privacy-list a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-privacy-list a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -1px;
+  left: 0;
+  background-color: rgba(251, 251, 251, 0.7);
+  transition: width 0.3s ease;
+}
+
+.footer-privacy-list a:hover {
+  color: rgba(251, 251, 251, 0.9);
+  transform: translateY(-1px);
+}
+
+.footer-privacy-list a:hover::after {
+  width: 100%;
+}
+
 .footer-privacy-text {
   line-height: 16px;
 }
 
 .footer-privacy-p {
   line-height: 14px;
+  transition: color 0.3s ease;
 }
+
+.footer-privacy-p:hover {
+  color: rgba(251, 251, 251, 0.8);
+}
+
 /* ========== TABLET ========== */
 
 @media screen and (min-width: 768px) {
@@ -193,6 +303,7 @@
     font-size: 18px;
   }
 }
+
 /* ========== DESKTOP ========== */
 
 @media screen and (min-width: 1280px) {
@@ -219,5 +330,18 @@
 
   .footer-adress-list {
     letter-spacing: 0.015em;
+  }
+
+  /* Додаткові desktop ефекти */
+  .footer-nav-link:hover {
+    transform: scale(1.05) translateY(-2px);
+  }
+
+  .footer-tel:hover {
+    transform: scale(1.05) translateY(-2px);
+  }
+
+  .footer-logo-p:hover {
+    transform: translateY(-5px);
   }
 }

@@ -1,108 +1,407 @@
+/* Hover ефекти для заголовка */
 .vegetables-section-title {
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 1.04167;
-    letter-spacing: -0.01em;
-    color: #fbfbfb;
-    padding-bottom: 20px;
-    text-align: left;
-    text-transform: uppercase;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.04167;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+  padding-bottom: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.vegetables-section-title:hover {
+  transform: translateY(-3px);
+  text-shadow: 0 4px 15px rgba(251, 251, 251, 0.3);
+}
+
+/* Hover ефекти для опису */
 .vegetables-description {
-    max-width: 335px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.28571;
-    color: #fbfbfb;
+  max-width: 335px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  color: #fbfbfb;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.vegetables-description:hover {
+  color: rgba(251, 251, 251, 0.9);
+  transform: translateX(5px);
 }
 
 .accent-color {
-    color: rgba(251, 251, 251, 0.3);
+  color: rgba(251, 251, 251, 0.3);
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vegetables-section-title:hover .accent-color {
+  color: rgba(251, 251, 251, 0.7);
 }
 
 .vegetables-section {
-    background-color: #7a3145;
-    padding: 80px 0;
+  background-color: #7a3145;
+  padding: 80px 0;
 }
 
 .vegetables-title-container {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .vegetables-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
+/* Flip картки - основний контейнер */
 .vegetables-list-item {
-    border-radius: 40px;
-    padding: 32px 26px;
-    height: 379px;
-    background-color: #fbfbfb;
+  border-radius: 40px;
+  padding: 0;
+  height: 379px;
+  background-color: transparent;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+/* Внутрішній контейнер для flip ефекту */
+.vegetable-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.vegetables-list-item:hover .vegetable-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Передня та задня частини картки */
+.vegetable-card-front,
+.vegetable-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 40px;
+  padding: 32px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Передня частина */
+.vegetable-card-front {
+  background-color: #fbfbfb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vegetables-list-item:hover .vegetable-card-front {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Задня частина */
+.vegetable-card-back {
+  background-color: #576f35;
+  color: #fbfbfb;
+  transform: rotateY(180deg);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Декоративний елемент для задньої частини */
+.vegetable-card-back::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(251, 251, 251, 0.1) 0%,
+    transparent 70%
+  );
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(0);
+}
+
+.vegetables-list-item:hover .vegetable-card-back::before {
+  transform: scale(1);
+}
+
+/* Стилі для передньої частини */
+.cont-veg-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .vegetables-name {
-    font-size: 28px;
-    line-height: 1;
-    color: #7a3145;
-    padding-bottom: 12px;
+  font-size: 28px;
+  line-height: 1;
+  color: #7a3145;
+  padding-bottom: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vegetables-list-item:hover .vegetables-name {
+  transform: scale(1.05);
+  color: #622133;
 }
 
 .vegetables-price {
-    font-size: 14px;
-    line-height: 1.28571;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    color: #141414;
-    padding-bottom: 14px;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #141414;
+  padding-bottom: 14px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.vegetables-list-item:hover .vegetables-price {
+  color: #7a3145;
+  font-weight: 600;
+}
+
+.vegetables-list-img {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vegetables-list-item:hover .vegetables-list-img {
+  transform: scale(1.1);
+}
+
+/* Стилі для задньої частини */
+.vegetable-info {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.vegetable-info-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.vegetable-info-title:hover {
+  transform: scale(1.1);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  color: #fbfbfb;
+}
+
+.vegetable-calories {
+  background-color: rgba(251, 251, 251, 0.1);
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.vegetable-calories:hover {
+  background-color: rgba(251, 251, 251, 0.2);
+  transform: scale(1.05);
+  border-color: rgba(251, 251, 251, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.calories-number {
+  font-size: 32px;
+  font-weight: 700;
+  display: block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vegetable-calories:hover .calories-number {
+  transform: scale(1.1);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.calories-text {
+  font-size: 12px;
+  opacity: 0.8;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vegetable-calories:hover .calories-text {
+  opacity: 1;
+}
+
+.vegetable-vitamins {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vitamins-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  opacity: 0.9;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.vitamins-title:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.vitamins-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.vitamin-tag {
+  background-color: rgba(251, 251, 251, 0.2);
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.vitamin-tag:hover {
+  background-color: rgba(251, 251, 251, 0.3);
+  transform: scale(1.1) translateY(-2px);
+  border-color: rgba(251, 251, 251, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+}
+
+.vegetable-benefits {
+  margin-top: 15px;
+}
+
+.benefits-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  opacity: 0.9;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.benefits-title:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+.benefits-text {
+  font-size: 11px;
+  line-height: 1.3;
+  opacity: 0.8;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.benefits-text:hover {
+  opacity: 1;
+  background-color: rgba(251, 251, 251, 0.1);
+  transform: scale(1.02);
+}
+
+/* Адаптив для планшетів */
 @media only screen and (min-width: 768px) {
-    .vegetables-list {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 28px 20px;
-    }
+  .vegetables-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 28px 20px;
+  }
 
-    .vegetables-list-item {
-        flex-basis: calc((100% - 28px) / 2);
-    }
+  .vegetables-list-item {
+    flex-basis: calc((100% - 28px) / 2);
+  }
 
-    .vegetables-section-title {
-        font-size: 64px;
-        padding-bottom: 50px;
-    }
+  .vegetables-section-title {
+    font-size: 64px;
+    padding-bottom: 50px;
+  }
 
-        .vegetables-name {
-            font-size: 32px;
-        }
+  .vegetables-name {
+    font-size: 32px;
+  }
 
-    .accent-color {
-        display: block;
-    }
+  .accent-color {
+    display: block;
+  }
 
-    .vegetables-description {
-        max-width: 626px;
-        margin-bottom: 50px;
-        font-size: 16px;
-        line-height: 1.25;
-    }
+  .vegetables-description {
+    max-width: 626px;
+    margin-bottom: 50px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
 
+  .vegetable-info-title {
+    font-size: 28px;
+  }
+
+  .calories-number {
+    font-size: 36px;
+  }
+
+  .vitamins-title {
+    font-size: 18px;
+  }
+
+  .vitamin-tag {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .benefits-title {
+    font-size: 16px;
+  }
+
+  .benefits-text {
+    font-size: 12px;
+  }
 }
 
+/* Адаптив для десктопу */
 @media only screen and (min-width: 1280px) {
-    .container {
-        max-width: 1280px;
-        padding: 0 100px;
-    }
+  .container {
+    max-width: 1280px;
+    padding: 0 100px;
+  }
 
-    .vegetables-list-item {
-        flex-basis: calc((100% - 56px) / 3);
-    }
+  .vegetables-list-item {
+    flex-basis: calc((100% - 56px) / 3);
+  }
 }

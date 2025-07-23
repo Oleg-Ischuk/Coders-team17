@@ -25,9 +25,16 @@
   padding-bottom: 40px;
 }
 
+/* Анімація для контейнера зображення */
 .container-img {
   height: 450px;
   position: relative;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container-img:hover {
+  transform: scale(1.02);
 }
 
 .overlay {
@@ -42,12 +49,26 @@
   height: 100%;
   width: 100%;
   border-radius: 30px;
+  transition: background-image 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container-img:hover .overlay {
+  background-image: linear-gradient(
+    0deg,
+    rgba(20, 20, 20, 0.1) 0%,
+    rgba(20, 20, 20, 0.1) 100%
+  );
 }
 
 .cooking-woman {
   width: 100%;
   height: 100%;
   border-radius: 30px;
+  transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container-img:hover .cooking-woman {
+  filter: brightness(1.1) saturate(1.1);
 }
 
 .work-conteiner {
@@ -70,6 +91,12 @@
 
 .selection-title-p2 {
   color: rgba(251, 251, 251, 0.3);
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover ефект для акцентованого тексту в заголовку */
+.title-p2:hover .selection-title-p2 {
+  color: rgba(251, 251, 251, 0.7);
 }
 
 .text-p2 {
@@ -80,6 +107,11 @@
   margin-bottom: 40px;
   letter-spacing: -0.02em;
   max-width: 335px;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-p2:hover {
+  color: rgba(251, 251, 251, 0.9);
 }
 
 .list-p2 {
@@ -90,6 +122,7 @@
   counter-reset: list-counter;
 }
 
+/* Анімації для елементів списку */
 .list-item-p2 {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -102,8 +135,40 @@
   align-items: center;
   gap: 24px;
   counter-increment: list-counter;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
 }
 
+/* Ефект підсвічування для елементів списку */
+.list-item-p2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(122, 49, 69, 0.1),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.list-item-p2:hover::after {
+  left: 100%;
+}
+
+.list-item-p2:hover {
+  transform: translateX(10px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+}
+
+/* Анімація для номерів кроків */
 .list-item-p2::before {
   content: counter(list-counter);
   color: #fbfbfb;
@@ -120,8 +185,17 @@
   background-color: #7a3145;
   border: 5px solid rgba(211, 190, 196, 1);
   flex-shrink: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.list-item-p2:hover::before {
+  transform: scale(1.1) rotate(5deg);
+  background-color: #622133;
+  border-color: rgba(211, 190, 196, 0.8);
+  box-shadow: 0 4px 15px rgba(122, 49, 69, 0.3);
+}
+
+/* Анімація для тексту в елементах списку */
 .list-text-p2 {
   color: rgba(20, 20, 20, 0.6);
   font-size: 12px;
@@ -129,6 +203,11 @@
   line-height: 1.17;
   letter-spacing: -0.024px;
   text-align: start;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-item-p2:hover .list-text-p2 {
+  color: rgba(20, 20, 20, 0.8);
 }
 
 .list-selection-p2 {
@@ -137,6 +216,11 @@
   font-weight: 700;
   line-height: 1.17;
   letter-spacing: -0.024px;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-item-p2:hover .list-selection-p2 {
+  color: #7a3145;
 }
 
 @media screen and (min-width: 768px) {
@@ -211,11 +295,7 @@
     padding-bottom: 100px;
     padding-right: 0;
     padding-left: 0;
-    background: linear-gradient(
-      to right,
-      #7a3145 0% 50%,
-      #576f35 50% 100%
-    );
+    background: linear-gradient(to right, #7a3145 0% 50%, #576f35 50% 100%);
   }
 
   .section-main-container {
