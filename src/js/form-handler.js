@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function toggleSubmitButton(disabled = false) {
     submitBtn.disabled = disabled;
     if (disabled) {
-      submitBtn.textContent = 'Відправляємо...';
+      submitBtn.textContent = 'Sending...';
     } else {
       submitBtn.textContent = 'Send';
     }
