@@ -190,6 +190,8 @@
   cursor: pointer;
   gap: 10px;
   border: none;
+  margin: 0 auto;
+  margin-top: 150px;
   position: relative;
   overflow: hidden;
   background-color: #fbfbfb;
